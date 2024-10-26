@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    @apply font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-title;
+}
+
+#home {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.pixabay.com/photo/2017/04/26/09/44/sport-2262083_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    /* position: relative !important;
+    overflow: hidden; */
+    @apply relative overflow-hidden;
+}
+
+.card::before {
+    transition: all .7s;
+    content: '' !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    background: linear-gradient(to right, #C64710, #F68C38) !important;
+    bottom: 100%;
+    left: 0;
+    z-index: 10;
+    /* @apply transition-all duration-700 absolute w-full h-full block bg-gradient-to-r from-orange-400 to-orange-700 bottom-full left-0 z-10; */
+}
+
+.card:hover::before {
+    bottom: 0;
+    /* @apply bottom-0; */
+}
+
+.card:hover h2,
+.card:hover p,
+.card:hover a,
+.card:hover i {
+    position: relative;
+    color: white;
+    z-index: 20;
+    /* @apply relative text-white z-20; */
+}
+
+.card:hover a::before {
+    /* background: #fff; */
+    @apply bg-white;
+}
+
+.btn {
+    @apply bg-gradient-to-r from-orange-700 to-orange-400 text-xl p-5 px-10 inline-block uppercase font-light tracking-widest hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-700 hover:-translate-y-1 transition duration-500 ease-linear text-white my-4;
+}
+
+#discount {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.pixabay.com/photo/2017/04/26/09/44/sport-2262083_1280.jpg');
+    height: 30rem;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    @apply font-title uppercase font-bold text-4xl my-5 text-center relative before:bg-rose-500 before:inline-block before:w-20 before:h-1 before:absolute before:left-1/2 before:-top-6 before:-translate-x-1/2;
+}
+
+section {
+    @apply py-28;
+}
+
+#customer {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604151_640.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
